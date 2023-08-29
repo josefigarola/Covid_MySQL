@@ -25,8 +25,8 @@ def csv_to_sql_insert(csv_filename, table_name, sql_filename):
                 i += 1
 
 # Replace these values with your actual CSV file, desired table name, and SQL file path
-csv_filename = r"C:\Users\jmfig\Downloads\CovidDeaths.csv"
-table_name = 'deaths'
-sql_filename = r"C:\Users\jmfig\Downloads\deaths.sql"  # Update with your actual username
+csv_filename = r"path/table.csv"
+table_name = 'table_name'
+sql_filename = r"path/table.sql"  # Update with your actual username
 
 csv_to_sql_insert(csv_filename, table_name, sql_filename)

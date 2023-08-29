@@ -22,3 +22,6 @@ Visualizing the data is important to perform different analysis and get to concl
 a map was created with Tableau in which we can see the countries in which
 more cases and deaths were registered. The redd-ish countries got more deaths than the white-ish ones.
 ![Map](Others/Cases_and_Deaths.png)
+
+# Bibliography
+Edouard Mathieu, Hannah Ritchie, Lucas Rodés-Guirao, Cameron Appel, Charlie Giattino, Joe Hasell, Bobbie Macdonald, Saloni Dattani, Diana Beltekian, Esteban Ortiz-Ospina and Max Roser (2020) - "Coronavirus Pandemic (COVID-19)". Published online at OurWorldInData.org. Retrieved from: 'https://ourworldindata.org/coronavirus' [Online Resource]

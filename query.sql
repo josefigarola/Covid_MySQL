@@ -189,3 +189,29 @@ SELECT
     (vaccinatedPercentage/population)*100 AS VaccinationPercentage
 FROM 
     PercentPopulationVaccinated;
+
+# Creating VIEW for later visualization
+CREATE VIEW VaccinationView AS
+    SELECT
+        deaths.continent,
+        deaths.location,
+        deaths.date,
+        deaths.population,
+        CASE WHEN vaccs.new_vaccinations = '' THEN NULL ELSE vaccs.new_vaccinations END AS newVacss,
+        SUM(CAST(CASE WHEN vaccs.new_vaccinations = '' THEN '0' ELSE vaccs.new_vaccinations END AS UNSIGNED)) 
+        OVER (PARTITION BY deaths.location ORDER BY deaths.location, deaths.date) AS TotalVaccinations
+    FROM
+        deaths
+    JOIN
+        vaccs
+    ON 
+        deaths.location = vaccs.location
+        AND deaths.date = vaccs.date
+    WHERE
+        deaths.continent IS NOT NULL
+        AND deaths.continent <> '';
+SELECT 
+    *,
+    (TotalVaccinations / population) * 100 AS VaccinationPercentage
+FROM 
+    VaccinationView;

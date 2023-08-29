@@ -8,9 +8,16 @@ and was downloaded August 2023.
 The data given was from COVID in which we can devide into vaccination data and deaths data in CSV files. 
 Date formatting was given in Excel in order to have YYYY-MM-DD insted of DD/MM/YYYY for SQL purposes.
 
+# Data Exploration
+Data exploration is important to understand the context of a problem and find patterns in a given dataset.
+the query file contains different ways to visualize the table for different purposes and exploration.
+
 # Importing Data
 Some workbench can import CSV files pretty easy and rapidly, on my case I used MySQL Workbench CE 8.0
 and was not allowed to import it smoothly so the python script on 'Others' folder converts CSV to SQL files.
 (Keep in mind that the data types are all TEXT and require to change the type or cast it altering the tables).
 
-![Map](Others/Cases_and_Deaths.png)
+# Data Visualization
+Visualizing the data is important to perform different analysis and get to conclusions. Therefore,
+a ![Map](Others/Cases_and_Deaths.png) was created with Tableau in which we can see the countries in which
+more cases and deaths were registered. The redd-ish countries got more deaths than the white-ish ones.

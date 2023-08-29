@@ -18,7 +18,7 @@ the query file contains different ways to visualize the table for different purp
 Some workbench can import CSV files pretty easy and rapidly, on my case I used MySQL Workbench CE 8.0
 and was not allowed to import it smoothly so the python script on 'Others' folder converts CSV to SQL files.
 (Keep in mind that the data types are all TEXT and require to change the type or cast it altering the tables).
-* Run the 'deaths.sql' and 'vaccs.sql' query to import the data or download the CSV.
+* Run the 'deaths.sql' and 'vaccs.sql' query to import the data or import directly the CSV.
 
 # Data Visualization
 Visualizing the data is important to perform different analysis and get to conclusions. Therefore,

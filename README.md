@@ -19,5 +19,6 @@ and was not allowed to import it smoothly so the python script on 'Others' folde
 
 # Data Visualization
 Visualizing the data is important to perform different analysis and get to conclusions. Therefore,
-a ![Map](Others/Cases_and_Deaths.png) was created with Tableau in which we can see the countries in which
+a map was created with Tableau in which we can see the countries in which
 more cases and deaths were registered. The redd-ish countries got more deaths than the white-ish ones.
+![Map](Others/Cases_and_Deaths.png)

@@ -12,7 +12,7 @@ Date formatting was given in Excel in order to have YYYY-MM-DD insted of DD/MM/Y
 # Data Exploration
 Data exploration is important to understand the context of a problem and find patterns in a given dataset.
 the query file contains different ways to visualize the table for different purposes and exploration.
-<h1 align="center">![Data Exploration](Others/query1.png)
+<h1 align="center"> ![Data Exploration](Others/query1.png)
 
 # Importing Data
 Some workbench can import CSV files pretty easy and rapidly, on my case I used MySQL Workbench CE 8.0
@@ -24,7 +24,7 @@ and was not allowed to import it smoothly so the python script on 'Others' folde
 Visualizing the data is important to perform different analysis and get to conclusions. Therefore,
 a map was created with Tableau in which we can see the countries in which
 more cases and deaths were registered. The redd-ish countries got more deaths than the white-ish ones.
-<h1 align="center">![Map](Others/Cases_and_Deaths.png)
+<h1 align="center"> ![Map](Others/Cases_and_Deaths.png)
 
 # Bibliography
 Edouard Mathieu, Hannah Ritchie, Lucas Rodés-Guirao, Cameron Appel, Charlie Giattino, Joe Hasell, Bobbie Macdonald, Saloni Dattani, Diana Beltekian, Esteban Ortiz-Ospina and Max Roser (2020) - "Coronavirus Pandemic (COVID-19)". Published online at OurWorldInData.org. Retrieved from: 'https://ourworldindata.org/coronavirus' [Online Resource]

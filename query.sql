@@ -78,3 +78,18 @@ GROUP BY
     continent
 ORDER BY 
     TotalDeathCount DESC; 
+
+# Global stats
+SELECT 
+    date,
+    SUM(new_cases) AS TotalCases,
+    SUM(cast(new_deaths AS UNSIGNED)) AS TotalDeaths,
+    SUM(cast(new_deaths AS UNSIGNED))/SUM(new_cases)*100 AS DeathPercentage
+FROM
+    deaths
+WHERE 
+    continent is not NULL
+GROUP BY
+    date
+ORDER BY
+    1,2;

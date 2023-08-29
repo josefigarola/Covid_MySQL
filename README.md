@@ -1,4 +1,4 @@
-##MYSQL Practices for Data Analysis
+# MYSQL Practices for Data Analysis
 
 This repository focuses on creating different queries for Data Analysis and SQL practice.
 A Tableau peoject was made from the data given from this [Repo](https://ourworldindata.org/covid-deaths).

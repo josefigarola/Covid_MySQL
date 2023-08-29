@@ -117,7 +117,7 @@ WHERE
 ORDER BY
     2,3;
 
-# Creating TMP for new column using CTE
+# Using CTE
 WITH   
     PopsvsVacss(
         continent,
@@ -146,4 +146,46 @@ AS(
         deaths.continent is not null
         AND deaths.continent <> ''
 )
-SELECT * FROM PopsvsVacss;
+SELECT 
+    *,
+    (TotalVaccinations/population)*100 AS VaccinationPercentage
+FROM 
+    PopsvsVacss;
+
+# Creating TEMP table
+DROP TABLE IF EXISTS PercentPopulationVaccinated;
+CREATE TABLE PercentPopulationVaccinated
+(
+    continent VARCHAR(255),
+    location VARCHAR(255),
+    date DATETIME,
+    population NUMERIC,
+    newVacss NUMERIC,
+    vaccinatedPercentage NUMERIC
+);
+INSERT INTO PercentPopulationVaccinated
+    SELECT
+        deaths.continent,
+        deaths.location,
+        deaths.date,
+        deaths.population,
+        CASE WHEN vaccs.new_vaccinations = '' THEN NULL ELSE vaccs.new_vaccinations END AS newVacss,
+        SUM(CAST(CASE WHEN vaccs.new_vaccinations = '' THEN '0' ELSE vaccs.new_vaccinations END AS UNSIGNED)) 
+        OVER (PARTITION BY deaths.location ORDER BY deaths.location, deaths.date) AS TotalVaccinations
+    FROM
+        deaths
+    JOIN
+        vaccs
+    ON 
+        deaths.location = vaccs.location
+        AND deaths.date = vaccs.date
+    WHERE
+        deaths.continent IS NOT NULL
+        AND deaths.continent <> ''
+    ORDER BY
+        2,3;
+SELECT 
+    *,
+    (vaccinatedPercentage/population)*100 AS VaccinationPercentage
+FROM 
+    PercentPopulationVaccinated;

@@ -89,7 +89,30 @@ FROM
     deaths
 WHERE 
     continent is not NULL
+    AND continent <> ''
 GROUP BY
     date
 ORDER BY
     1,2;
+
+# Total popuilation vs Total vaccination
+SELECT
+    deaths.continent,
+    deaths.location,
+    deaths.date,
+    deaths.population,
+    vaccs.new_vaccinations,
+    SUM(cast(vaccs.new_vaccinations AS UNSIGNED)) 
+    OVER (PARTITION BY deaths.location ORDER BY deaths.location, deaths.date) AS TotalVaccinations
+FROM
+    deaths
+JOIN
+    vaccs
+ON 
+    deaths.location = vaccs.location
+    and deaths.date = vaccs.date
+WHERE
+    deaths.continent is not null
+    AND deaths.continent <> ''
+ORDER BY
+    2,3;

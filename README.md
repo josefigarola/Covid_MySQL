@@ -31,7 +31,7 @@ While getting started it is important to understand de basics of DBA and MySQL f
 you can get an insight on how to connect you Data Base to a python script and if wanted, manipulated the data.
 Utils/Graph.py is used in order to graph the data given a query written in the python script, this query will
 give us the total deaths per date in a country.
-![Data Exploration](Others/Deatgs per day in Mexico.png)
+![Data Exploration](Others/Deaths per day in Mexico.png)
 
 # Bibliography
 Edouard Mathieu, Hannah Ritchie, Lucas Rodés-Guirao, Cameron Appel, Charlie Giattino, Joe Hasell, Bobbie Macdonald, Saloni Dattani, Diana Beltekian, Esteban Ortiz-Ospina and Max Roser (2020) - "Coronavirus Pandemic (COVID-19)". Published online at OurWorldInData.org. Retrieved from: 'https://ourworldindata.org/coronavirus' [Online Resource]

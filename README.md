@@ -16,7 +16,7 @@ the query file contains different ways to visualize the table for different purp
 
 # Importing Data
 Some workbench can import CSV files pretty easy and rapidly, on my case I used MySQL Workbench CE 8.0
-and was not allowed to import it smoothly so the python script on 'Others' folder converts CSV to SQL files.
+and was not allowed to import it smoothly so the cvs2sql script on Utili' folder converts CSV to SQL files.
 (Keep in mind that the data types are all TEXT and require to change the type or cast it altering the tables).
 * Run the 'deaths.sql' and 'vaccs.sql' query to import the data or import directly the CSV.
 
@@ -25,6 +25,13 @@ Visualizing the data is important to perform different analysis and get to concl
 a map was created with Tableau in which we can see the countries in which
 more cases and deaths were registered. The redd-ish countries got more deaths than the white-ish ones.
 ![Map](Others/Cases_and_Deaths.png)
+
+# Connecting to Python Script 
+While getting started it is important to understand de basics of DBA and MySQL functions. Using the Connect2PyScript.py
+you can get an insight on how to connect you Data Base to a python script and if wanted, manipulated the data.
+Utils/Graph.py is used in order to graph the data given a query written in the python script, this query will
+give us the total deaths per date in a country.
+![Data Exploration](Others/Deatgs per day in Mexico.png)
 
 # Bibliography
 Edouard Mathieu, Hannah Ritchie, Lucas Rodés-Guirao, Cameron Appel, Charlie Giattino, Joe Hasell, Bobbie Macdonald, Saloni Dattani, Diana Beltekian, Esteban Ortiz-Ospina and Max Roser (2020) - "Coronavirus Pandemic (COVID-19)". Published online at OurWorldInData.org. Retrieved from: 'https://ourworldindata.org/coronavirus' [Online Resource]

@@ -1,0 +1,9 @@
+# Ignore compiled files
+*.pyc
+*.class
+
+# Ignore log files
+*.log
+
+# Ignore a specific directory
+#my_directory/

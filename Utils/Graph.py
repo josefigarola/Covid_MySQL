@@ -24,7 +24,7 @@ class Graph:
         plt.ylabel('Value')
 
         # Save the plot to a file (optional)
-        name = 'Deaths per day in' + self.location
+        name = 'Deaths per day in ' + self.location
         plt.savefig('Others/'+name+'.png')
 
         # Show the plot

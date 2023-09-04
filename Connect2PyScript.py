@@ -20,7 +20,7 @@ cursor = conn.cursor()
 
 # Execute a SQL query to fetch data from your database
 # Define the location
-location = 'United States'
+location = 'Mexico'
 # Construct the SQL query with single quotes around 'location'
 query = f"SELECT date, total_deaths FROM deaths WHERE location LIKE '{location}' ORDER BY 1, 2"
 

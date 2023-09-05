@@ -7,7 +7,7 @@ class Graph:
         self.values = values
         self.location = location
         
-    def create_graph(self):
+    def create_graph(self,name,title,x,y):
         # Create a plot using matplotlib
         fig, ax = plt.subplots(figsize=(10, 6))
         ax.plot(self.dates, self.values, linestyle='-', color='b')
@@ -19,12 +19,11 @@ class Graph:
         ax.yaxis.set_major_locator(AutoDateLocator(minticks=30))  # Adjust minticks as needed
 
         # Labeling and formatting
-        plt.title('Total Deaths in Mexico')
-        plt.xlabel('Date')
-        plt.ylabel('Value')
+        plt.title(title)
+        plt.xlabel(x)
+        plt.ylabel(y)
 
         # Save the plot to a file (optional)
-        name = 'Total_Deaths_in_' + self.location
         plt.savefig('Others/'+name+'.png')
 
         # Show the plot

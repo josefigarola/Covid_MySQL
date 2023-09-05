@@ -30,7 +30,7 @@ more cases and deaths were registered. The redd-ish countries got more deaths th
 While getting started it is important to understand de basics of DBA and MySQL functions. Using the Connect2PyScript.py
 you can get an insight on how to connect you Data Base to a python script and if wanted, manipulated the data.
 Utils/Graph.py is used in order to graph the data given a query written in the python script, this query will
-give us the total deaths per date in a country.
+give us the total deaths per day in a country.
 ![MexicoGraph](Others/Deaths_per_day_in_Mexico.png)
 
 # Bibliography

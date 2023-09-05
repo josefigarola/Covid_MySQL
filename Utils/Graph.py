@@ -19,12 +19,12 @@ class Graph:
         ax.yaxis.set_major_locator(AutoDateLocator(minticks=30))  # Adjust minticks as needed
 
         # Labeling and formatting
-        plt.title('Deaths per day in Mexico')
+        plt.title('Total Deaths in Mexico')
         plt.xlabel('Date')
         plt.ylabel('Value')
 
         # Save the plot to a file (optional)
-        name = 'Deaths_per_day_in_' + self.location
+        name = 'Total_Deaths_in_' + self.location
         plt.savefig('Others/'+name+'.png')
 
         # Show the plot
